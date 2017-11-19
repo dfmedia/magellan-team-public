@@ -17,10 +17,11 @@
 .App {
   text-align: center;
   background: var(--red-color);
-  margin: 50px auto;
+  margin: 30px auto;
 }
 h1 {
   color: var(--yellow-color);
   font-family: 'star wars font';
   font-size: 4em;
+  margin-top: 0px;
 }

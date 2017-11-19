@@ -1,15 +1,29 @@
 import React from 'react';
-import movieData from '../../movies.json';
 import MovieCard from '../MovieCard/MovieCard';
 
-const MovieList = () => {
+const MovieList = (props) => {
+  const movieList = () => {
+    return props.movies.map((movie, index) => {
+      let favoriteStatus = 'not-favorite';
+
+      if(props.favorites.length) {
+        favoriteStatus = props.favorites.includes(movie.Title) ? 'favorite' : 'not-favorite';
+      }
+      return (
+        <MovieCard
+          movie={movie}
+          key={index}
+          favortieMovie={props.favoriteMove}
+          removeFavorite={props.removeFavorite}
+          favoriteStatus={favoriteStatus}
+        />
+      )
+    })
+  }
+
   return (
     <section className='movie-list-container'>
-      {movieData.Search.map((movie, index) => {
-        return (
-          <MovieCard movie={movie} key={index}/>
-        )
-      })}
+      {movieList()}
     </section>
   )
 };
