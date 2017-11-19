@@ -1,0 +1,14 @@
+:root {
+    --black-color: #333333;
+    --tan-color: #7e7863;
+    --yellow-color: #ad7d37;
+    --blue-color: #2e557c;
+    --red-color: #381010;
+    --green-color: #334e30;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--red-color);
+}
