@@ -1,28 +1,26 @@
+@import url('../../components/MovieCard/MovieCard.css');
+@import url('../../components/MovieList/MovieList.css');
+
+@font-face {
+  font-family: 'star wars font';
+  src: url(../../assets/starJedi.ttf);
+}
+@font-face {
+  font-family: 'star wars hollow';
+  src: url(../../assets/starHollow.ttf);
+}
+@font-face {
+  font-family: 'death star';
+  src: url(../../assets/deathStar.otf);
+}
+
 .App {
   text-align: center;
+  background: var(--red-color);
+  margin: 50px auto;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h1 {
+  color: var(--yellow-color);
+  font-family: 'star wars font';
+  font-size: 4em;
 }
