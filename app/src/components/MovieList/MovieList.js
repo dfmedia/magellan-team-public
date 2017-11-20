@@ -13,7 +13,7 @@ const MovieList = (props) => {
         <MovieCard
           movie={movie}
           key={index}
-          favortieMovie={props.favoriteMove}
+          favoriteMovie={props.favoriteMovie}
           removeFavorite={props.removeFavorite}
           favoriteStatus={favoriteStatus}
         />

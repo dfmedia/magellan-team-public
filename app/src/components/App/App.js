@@ -5,9 +5,6 @@ import MovieListContainer from '../MovieList/MovieListContainer';
 import movieData from '../../movies.json';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentWillMount() {
     this.props.loadMovies(movieData.Search);

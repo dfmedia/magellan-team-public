@@ -1,15 +1,11 @@
 import React from 'react';
 
 const MovieCard = ({movie, favoriteMovie, removeFavorite, favoriteStatus }) => {
-  let buttonColor = '';
-
   const determineFavoriteStatus = () => {
     if(favoriteStatus === 'not-favorite') {
       favoriteMovie(movie.Title);
-      buttonColor = 'favorite';
     } else {
-      removeFavorite(movie.Title)
-      buttonColor = 'not-favorite'
+      removeFavorite(movie.Title);
     }
   }
 
@@ -21,7 +17,7 @@ const MovieCard = ({movie, favoriteMovie, removeFavorite, favoriteStatus }) => {
         <p className='imdb-id'>IMDB ID:  {movie.imdbID}</p>
         <img className='movie-poster' src={movie.Poster} alt={movie.Title} />
       </section>
-      <button onClick={()=>{determineFavoriteStatus()}} className={buttonColor}>Favorite</button>
+      <button onClick={()=>{determineFavoriteStatus()}} className={favoriteStatus}>Favorite</button>
     </article>
   )
 }
