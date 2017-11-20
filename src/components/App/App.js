@@ -12,6 +12,10 @@ export default class App extends Component {
       .then(res => {
         this.props.loadMovies(res);
       })
+      .catch(err => {
+        console.log('failed to load data from database, static data loaded');
+        this.props.loadMovies(movieData.Search);
+      })
   }
 
   render() {
