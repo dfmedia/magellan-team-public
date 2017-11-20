@@ -7,7 +7,11 @@ import movieData from '../../movies.json';
 export default class App extends Component {
 
   componentWillMount() {
-    this.props.loadMovies(movieData.Search);
+    fetch('http://localhost:3001/api/movies')
+      .then(res => res.json())
+      .then(res => {
+        this.props.loadMovies(res);
+      })
   }
 
   render() {
